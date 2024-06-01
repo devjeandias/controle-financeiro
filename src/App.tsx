@@ -1,11 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Dashboard from "./pages/Dashboard"
+import Clientes from "./pages/Clientes"
+import Pedidos from "./pages/Pedidos"
+import Produtos from "./pages/Produtos"
+import Layout from "./pages/layout"
+
 function App() {
 
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={ <Layout /> }>
+          <Route path="/" element={ <Dashboard /> } />
+          <Route path="/clientes" element={ <Clientes /> } />
+          <Route path="/pedidos" element={ <Pedidos /> } />
+          <Route path="/produtos" element={ <Produtos /> } />
+        </Route>
+      </Routes>
+    </Router>
   )
 }
 
