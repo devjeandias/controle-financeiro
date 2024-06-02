@@ -1,10 +1,11 @@
-function Pedidos() {
+import Title from "../../components/ui/typography"
+import OrderList from "./OrderList"
 
+function Pedidos() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Pedidos
-      </h1>
+      <Title>Pedidos</Title>
+      <OrderList />
     </>
   )
 }

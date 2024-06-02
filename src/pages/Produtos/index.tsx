@@ -1,9 +1,10 @@
+import Title from "../../components/ui/typography"
 import ProdutosList from "./ProducList"
 
 function Produtos() {
   return (
     <>
-      <h1 className="text-4xl font-thin mb-5"> Produtos </h1>
+      <Title>Produtos</Title>
       <ProdutosList />
     </>
   )
